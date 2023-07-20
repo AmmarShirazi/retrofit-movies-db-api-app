@@ -18,7 +18,7 @@ class Constant {
 
     companion object {
 
-        const val FreeMoviesDatabaseAPIKey: String = "7f7c2d2262msh098d0f1626244a3p1221cbjsnb371604fe114"
+        const val FreeMoviesDatabaseAPIKey: String = "get a new key fam its free anyways"
 
         fun isEmpty(etText: EditText): Boolean {
             if (etText.text.toString().trim { it <= ' ' }.isEmpty()) {
