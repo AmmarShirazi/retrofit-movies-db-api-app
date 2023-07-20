@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp"
+    android:gravity="center_vertical"
+    android:background="@color/grey_ish">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/row_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/image_wrapper"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:padding="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                android:scaleType="fitXY"
+                android:id="@+id/movie_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="tasveer"
+                android:src="@drawable/ic_launcher_foreground" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/movie_name_field"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="movie name here"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:paddingLeft="12dp"
+            app:layout_constraintStart_toEndOf="@id/image_wrapper"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/movie_year_field"/>
+
+        <TextView
+            android:id="@+id/movie_year_field"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="year"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/movie_name_field"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
